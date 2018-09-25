@@ -1,0 +1,36 @@
+html,body,ul,li,a,p,form,input,h1,h2,h3,h4,h5,h6,div{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: '微软雅黑',sans-serif;
+    font-size: 13px;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+    color: #666;
+}
+input{
+    outline:none;
+    border:1px solid #ccc;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content:"";
+    display: block;
+    height:0;
+    line-height: 0px;
+    clear:both;
+    visibility: hidden;
+}

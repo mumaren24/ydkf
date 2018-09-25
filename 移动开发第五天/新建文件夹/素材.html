@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .content div{
+        width: 400px;
+        height: 300px;
+        border:1px solid #ccc;
+        display: none;
+    }
+    .active{
+        color: #e92322;
+        background:blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="title">
+            <input type="button" value="外语">
+            <input type="button" value="政治">
+            <input type="button" value="历史">
+        </div>
+        <div class="content">
+            <div>外语内容</div>
+            <div>政治内容</div>
+            <div>历史内容</div>
+        </div>
+    </div>
+    <script src="./jquery.js"></script>
+    <script>
+    // $('.tab .title input[type="button"]').on('click',function(){
+    //     $(this).addClass('active').siblings().removeClass('active');
+    //     var index = $(this).index();
+    //     $('.tab .content>div').eq(index).show().siblings().hide();
+    // }).eq(0).trigger('click');
+    $('.tab .title input[type="button"]').on('click',function(){
+       $(this).addClass('active').siblings().removeClass('active');
+       var index = $(this).index();
+       $('.tab .content>div').eq(index).show().siblings().hide();
+    }).eq(0).trigger('click');
+    // $('.tab .title input[type=button]').on('click',function(){
+    //     $(this).addClass('active').siblings().removeClass('active');
+    //     var index = $(this).index();
+    //     $('.tab .content>div').eq(index).show().siblings().hide();
+    // }).eq(0).trigger('click');
+    </script>
+</body>
+</html>

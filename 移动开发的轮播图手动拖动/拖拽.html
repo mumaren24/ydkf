@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .ceshi{
+        width: 50px;
+        height: 50px;
+        background:blue;
+    }
+    </style>
+    <script>
+    window.onload = function(){
+        var ceshi = document.querySelector('.ceshi');
+        var startX,startY,moveX,moveY,distanceX,distanceY;
+        ceshi.onmousedown = function(e){
+            console.log(e);
+            startX = e.clientX;
+            startY = e.clientY;
+            ceshi.onmousemove = function(e){
+                moveX = e.clientX;
+                moveY = e.clientY;
+                distanceX = moveX - startX;
+                distanceY = moveY - startY;
+                ceshi.style.transform = 'translate('+distanceX+'px,'+distanceY+'px)'
+            }
+        }
+        onmousedown ontouchstart 手指按下去
+        onmousemove ontouchmove 滑
+        onmouseup ontouchend 松开
+
+    }
+
+    ceshi.addEventListener('touchstart',function(e){
+        e.targetTouches[0]
+    })
+
+    ceshi.addEventListener('touchmove',function(e){
+        e.targetTouches[0]
+    })
+
+    ceshi.addEventListener('touchend',function(e){
+        e.changedTouches[0]
+    })
+
+
+    </script>
+</head>
+<body>
+    <div class="ceshi"></div>
+</body>
+</html>
